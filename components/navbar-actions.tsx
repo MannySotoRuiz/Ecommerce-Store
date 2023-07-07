@@ -1,8 +1,8 @@
 "use client";
 
-import Button from "@/components/ui/Button";
 import { ShoppingBag } from "lucide-react";
 import { useEffect, useState } from "react";
+import Button from "./ui/button";
 
 const NavbarActions = () => {
   const [isMounted, setIsMounted] = useState(false);
