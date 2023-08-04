@@ -1,26 +1,26 @@
 "use client";
 
-import { FC } from "react";
 import { useEffect, useState } from "react";
 
 import Container from "@/components/ui/container";
 import useCart from "@/hooks/use-cart";
 
+import Summary from "./components/summary";
 import CartItem from "./components/cart-item";
 
-interface pageProps {}
+export const revalidate = 0;
 
-const page: FC<pageProps> = ({}) => {
-  // const [isMounted, setIsMounted] = useState<boolean>(false);
+const CartPage = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const cart = useCart();
 
-  // useEffect(() => {
-  //   setIsMounted(false);
-  // }, []);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-  // if (!isMounted) {
-  //   return null;
-  // }
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="bg-white">
@@ -41,7 +41,7 @@ const page: FC<pageProps> = ({}) => {
                 ))}
               </ul>
             </div>
-            {/* <Summary /> */}
+            <Summary />
           </div>
         </div>
       </Container>
@@ -49,4 +49,4 @@ const page: FC<pageProps> = ({}) => {
   );
 };
 
-export default page;
+export default CartPage;
