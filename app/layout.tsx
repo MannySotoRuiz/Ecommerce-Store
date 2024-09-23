@@ -12,7 +12,7 @@ const font = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ecommerce Store",
-  description: "Ecommerce Store developed by Emmanuel Soto Ruiz",
+  description: "Ecommerce Store developed by Emmanuel Soto Ruiz.",
 };
 
 export default function RootLayout({
